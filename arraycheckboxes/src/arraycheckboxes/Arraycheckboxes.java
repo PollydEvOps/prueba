@@ -1,9 +1,6 @@
 package arraycheckboxes;
-//jajjaa
-//jwjeje
-//jojojo
-import java.awt.EventQueue;
 
+import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
