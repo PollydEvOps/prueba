@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 public class Arraycheckboxes {
 
 	private JFrame frame;
-
+//POLLYANNA SOARES DA SILVA
 	/**
 	 * Launch the application.
 	 */
