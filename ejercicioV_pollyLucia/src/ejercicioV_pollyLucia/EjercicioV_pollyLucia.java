@@ -1,7 +1,5 @@
 package ejercicioV_pollyLucia;
-
 import java.util.Scanner;
-
 class Palabra {
 	String termino;
 	String deficion;
@@ -34,10 +32,9 @@ public class EjercicioV_pollyLucia {
 	static void mostrarMenu() {
 		System.out.println("1. Introducir un nuevo término y su definición en el diccionario: ");
 		System.out.println("2. Mostrar todos los términos (sin deficiones): ");
-		System.out.println();
-		System.out.println();
-		System.out.println();
-	
+		System.out.println("3. Obtener la definición de un termino");
+		System.out.println("4. Eliminar un termino y su definición");
+		System.out.println("5. Salir");
 	}
 
 	public static void main(String[] args) {
@@ -74,10 +71,30 @@ public class EjercicioV_pollyLucia {
 					
 					break;
 				case 3:
+					System.out.println("introduce el termino: ");
+					String palabra=s.next();
+					for(int i=0; i<contador;i++) {
+						if(palabra.equals(diccionario[i].getTermino())){
+							System.out.println("Definición: ");
+							System.out.println(diccionario[i].getDeficion());
+						}
+					}
 					break;
 					
 				case 4:
+					System.out.println("introduce el termino: ");
+					String palabraEliminar=s.next();
+					for(int i=0; i<contador;i++) {
+						if(palabraEliminar.equals(diccionario[i].getTermino())){
+							diccionario[i].setTermino("");
+							diccionario[i].setDeficion(null);
+							System.out.println("termino eliminado");
+						}
+					}
 						break;
+						
+				case 5:
+					System.out.println("saliendo del programa... ..."); break;
 			
 			default:
 				System.out.println("Opcion Invalida");
