@@ -82,16 +82,27 @@ public class EjercicioV_pollyLucia {
 					break;
 					
 				case 4:
-					System.out.println("introduce el termino: ");
-					String palabraEliminar=s.next();
-					for(int i=0; i<contador;i++) {
-						if(palabraEliminar.equals(diccionario[i].getTermino())){
-							diccionario[i].setTermino("");
-							diccionario[i].setDeficion(null);
-							System.out.println("termino eliminado");
-						}
-					}
-						break;
+					  System.out.println("Que palabra quieres borrar?:");
+		                String entrada = s.next();
+		                int posicion = -1;
+
+		                for (int i = 0; i < diccionario.length; i++) {
+		                    if (diccionario[i] != null && diccionario[i].getTermino().equals(entrada)) {
+		                        posicion = i;
+		                        break;
+		                    }
+		                }
+
+		                if (posicion != -1) {
+		                    for (int i = posicion + 1; i < diccionario.length - 1; i++) {
+		                        diccionario[i] = diccionario[i + 1];
+		                        contador=-1;
+		                    }
+		                    System.out.println("El termino y su definicion han sido eliminados");
+		                } else {
+		                    System.out.println("Ese termino no existe");
+		                }
+		                break;
 						
 				case 5:
 					System.out.println("saliendo del programa... ..."); break;
